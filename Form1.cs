@@ -20,16 +20,9 @@ namespace CrashFramework48
 
 	public class ComboBoxCrash : ComboBox
 	{
-		public sealed class ComboBoxCrashAccessibleObject : Control.ControlAccessibleObject
-		{
-			public ComboBoxCrashAccessibleObject(Control ownerControl) : base(ownerControl)
-			{
-			}
-		}
-
 		protected override AccessibleObject CreateAccessibilityInstance()
 		{
-			return new ComboBoxCrashAccessibleObject(this);
+			return new ControlAccessibleObject(this);
 		}
 	}
 
